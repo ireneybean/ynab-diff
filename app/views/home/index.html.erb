@@ -1,1 +1,5 @@
-
+<%= form_with do %>
+  <%= label_tag(:budgets, 'Choose Budget:') %>
+  <%= select('budget', 'name', @budgets.map { |budget| [budget.name, budget.id]}) %>
+  <%= submit_tag('Submit') %>
+<% end %>
